@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Rest API - Zhirrr</title>
+  <title>JEPRI BARUS ASW</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
@@ -19,21 +19,21 @@ window['CboxReady'] = function (Cbox) {
 <script src="https://static.cbox.ws/embed/1.js" async></script>
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="getvisitor();">
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
         <div class="sidebar-brand-icon">
         	<img src="img/logo/logo2.png">
         </div>
-        <div class="sidebar-brand-text mx-3">Zhirrr's API</div>
+        <div class="sidebar-brand-text mx-3">JEPRI BRS</div>
       </a>
       <hr class="sidebar-divider my-0">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-code"></i>
-          <span>Beranda</span></a>
+          <li class="breadcrumb-item"><a href="./">Beranda</a></li>
       </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
@@ -43,14 +43,18 @@ window['CboxReady'] = function (Cbox) {
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
           <i class="fas fa-fw fa-arrow-down"></i>
-          <span>Social Media API</span>
+          <span>Social Media</span>
         </a>
         <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Media Features</h6>
+            <h6 class="collapse-header">Media Sosial</h6>
+            <a class="collapse-item" href="api/yutub/video?url=MASUKIN_URL&apikey=MASUKIN_APIKEY">YouTube Video Downloader</a>
+            <a class="collapse-item" href="api/yutub/audio?url=MASUKIN_URL&apikey=MASUKIN_APIKEY">YouTube Audio Downloader</a>
             <a class="collapse-item" href="api/fbdown/?url=MASUKIN_URL&apikey=MASUKIN_APIKEY">Facebook Downloader</a>
             <a class="collapse-item" href="api/tiktod/?url=MASUKIN_URL&apikey=MASUKIN_APIKEY">Tiktok Downloader</a>
             <a class="collapse-item" href="api/tiktod/stalk/?username=MASUKIN_USERNAME&apikey=MASUKIN_APIKEY">Tiktok Stalk</a>
+            <a class="collapse-item" href="api/ig/stalk?username=MASUKIN_USERNAME&apikey=MASUKIN_APIKEY">Instagram Stalk</a>
+            <a class="collapse-item" href="api/yutub/search?video=Ustadz Abdul Somad&apikey=MASUKIN_APIKEY">YouTube Search</a>
             </div>
         </div>
       </li>
@@ -58,11 +62,11 @@ window['CboxReady'] = function (Cbox) {
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseIslamic" aria-expanded="true"
           aria-controls="collapseIslamic">
           <i class="fas fa-fw fa-table"></i>
-          <span>Islamic Features</span>
+          <span>Islamic</span>
         </a>
         <div id="collapseIslamic" class="collapse" aria-labelledby="headingIslamic" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Islamic  API</h6>
+            <h6 class="collapse-header">Islamic</h6>
             <a class="collapse-item" href="api/hadits?kitab=bukhari&nomor=52&apikey=MASUKAN_APIKEY">Hadits Shahih</a>
             <a class="collapse-item" href="api/quran?surah=1&ayat=2&apikey=MASUKAN_APIKEY">Al Qur'an</a>
             <a class="collapse-item" href="api/muslim/tahlil?apikey=MASUKAN_APIKEY">Doa Tahlil</a>
@@ -113,6 +117,53 @@ window['CboxReady'] = function (Cbox) {
         </div>
       </li>
       <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMaker"
+          aria-expanded="true" aria-controls="collapseMaker">
+          <i class="fa fa-fw fa-images"></i>
+          <span>TextMaker2D API</span>
+        </a>
+        <div id="collapseMaker" class="collapse" aria-labelledby="headingMaker" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">TextMaker2D API</h6>
+            <a class="collapse-item" href="api/maker?text=Ya Allah Kabulkan DoaKu&apikey=MASUKIN_APIKEY">Maker 1</a>
+            <a class="collapse-item" href="api/maker2?text=Ya Allah Kabulkan DoaKu&apikey=MASUKIN_APIKEY">Maker 2</a>
+            <a class="collapse-item" href="api/maker3?text=Ya Allah Kabulkan DoaKu&apikey=MASUKIN_APIKEY">Maker 3</a>
+            <a class="collapse-item" href="api/maker4?text=Ya Allah Kabulkan DoaKu&apikey=MASUKIN_APIKEY">Maker 4</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMaker3D"
+          aria-expanded="true" aria-controls="collapseMaker3D">
+          <i class="fa fa-fw fa-images"></i>
+          <span>TextMaker3D API</span>
+        </a>
+        <div id="collapseMaker3D" class="collapse" aria-labelledby="headingMaker3D" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">TextMaker3D API</h6>
+            <a class="collapse-item" href="api/maker3d?text=Ya Allah Kabulkan DoaKu&apikey=MASUKIN_APIKEY">Maker 1</a>
+            <a class="collapse-item" href="api/maker3d/no2?text=Ya Allah Kabulkan DoaKu&apikey=MASUKIN_APIKEY">Maker 2</a>
+            <a class="collapse-item" href="api/maker3d/no3?text=Ya Allah Kabulkan DoaKu&apikey=MASUKIN_APIKEY">Maker 3</a>
+            <a class="collapse-item" href="api/maker3d/no4?text=Ya Allah Kabulkan DoaKu&apikey=MASUKIN_APIKEY">Maker 4</a>
+            <a class="collapse-item" href="api/maker3d/no5?text=Ya Allah Kabulkan DoaKu&apikey=MASUKIN_APIKEY">Maker 5</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMakerOther"
+          aria-expanded="true" aria-controls="collapseMakerOther">
+          <i class="fa fa-fw fa-images"></i>
+          <span>TextMaker Other API</span>
+        </a>
+        <div id="collapseMakerOther" class="collapse" aria-labelledby="headingMakerOther" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">TextMaker Other API</h6>
+            <a class="collapse-item" href="api/maker/special/transformer?text=Transformer&apikey=MASUKIN_APIKEY">Transformer</a>
+            <a class="collapse-item" href="api/maker/special/epep?text=Zhirrr&apikey=MASUKIN_APIKEY">Sertifikat Epep</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseText" aria-expanded="true"
           aria-controls="collapseText">
           <i class="fas fa-fw fa-table"></i>
@@ -131,6 +182,10 @@ window['CboxReady'] = function (Cbox) {
             <a class="collapse-item" href="api/textmaker/metallic?text=Zhirrr&theme=glow&apikey=MASUKIN_APIKEY">Glow</a>
             <a class="collapse-item" href="api/textmaker/alam?text=Zhirrr&theme=summer&apikey=MASUKIN_APIKEY">Summer</a>
             <a class="collapse-item" href="api/textmaker/alam?text=Zhirrr&theme=flower&apikey=MASUKIN_APIKEY">Flower</a>
+            <a class="collapse-item" href="api/textmaker/random?text=Zhirrr&theme=text-burn&apikey=MASUKIN_APIKEY">Text Burn</a>
+            <a class="collapse-item" href="api/textmaker/random?text=Zhirrr&theme=art-quote&apikey=MASUKIN_APIKEY">Art Quote</a>
+            <a class="collapse-item" href="api/textmaker/roses?text=Zhirrr&theme=wooden-boarch&apikey=MASUKIN_APIKEY">Wooden Boarch</a>
+            <a class="collapse-item" href="api/textmaker/roses?text=Zhirrr&theme=golden&apikey=MASUKIN_APIKEY">Golden Roses</a>
           </div>
         </div>
       </li>
@@ -145,7 +200,6 @@ window['CboxReady'] = function (Cbox) {
             <h6 class="collapse-header">Anime/Manga Features</h6>
             <a class="collapse-item" href="api/anime/kusonime?search=planetarian&apikey=MASUKAN_APIKEY">Kusonime</a>
             <a class="collapse-item" href="api/manga?search=kimetsu no yaiba&apikey=MASUKAN_APIKEY">Manga</a>
-            
           </div>
         </div>
       </li>
@@ -162,6 +216,57 @@ window['CboxReady'] = function (Cbox) {
             </div>
             </div>
         </li>
+        <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFilmApik" aria-expanded="true" aria-controls="collapseForm">
+                    <i class="fab fa-fw fa-gratipay"></i>
+                    <span>FilmApik API</span>
+                </a>
+                <div id="collapseFilmApik" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">FilmApik Features</h6>
+            <a class="collapse-item" href="/api/filmapik/search?film=avenger&apikey=MASUKAN_APIKEY">Cari Film</a>
+            <a class="collapse-item" href="/api/filmapik/kategori?film=action&apikey=MASUKAN_APIKEY">Cari Kategori Film</a>
+            <a class="collapse-item" href="/api/filmapik/terbaru?apikey=MASUKAN_APIKEY">Film Terbaru</a>
+            <a class="collapse-item" href="/api/filmapik/play?id=142455&apikey=MASUKAN_APIKEY">Play Film</a>
+            </div>
+            </div>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLk21" aria-expanded="true" aria-controls="collapseForm">
+                    <i class="fas fa-fw fa-leaf"></i>
+                    <span>movie API</span>
+                </a>
+                <div id="collapseLk21" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Movie Features</h6>
+            <a class="collapse-item" href="/api/lk21/search?film=avenger&apikey=MASUKAN_APIKEY">Cari Film</a>
+            <a class="collapse-item" href="/api/lk21/terbaru?apikey=MASUKAN_APIKEY">Film Terbaru</a>
+            <a class="collapse-item" href="/api/lk21/comingsoon?apikey=MASUKAN_APIKEY">Film Yg Akan Datang</a>
+            <a class="collapse-item" href="/api/lk21/tvseries?apikey=MASUKAN_APIKEY">Series TV</a>
+            <a class="collapse-item" href="/api/lk21/year?tahun=2021&apikey=MASUKAN_APIKEY">Berdasarkan Tahun</a>
+            <a class="collapse-item" href="/api/lk21/country?negara=indonesia&apikey=MASUKAN_APIKEY">Berdasarkan Negara</a>
+            <a class="collapse-item" href="/api/lk21/genre?tipe=action&apikey=MASUKAN_APIKEY">Berdasarkan Genre</a>
+            </div>
+            </div>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNews" aria-expanded="true" aria-controls="collapseForm">
+                    <i class="fas fa-fw fa-exclamation"></i>
+                    <span>News API</span>
+                </a>
+                <div id="collapseNews" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">News Features</h6>
+            <a class="collapse-item" href="api/news">Jenis Berita</a>
+            <a class="collapse-item" href="api/news/cnn?type=JENIS_BERITA&apikey=MASUKKAN_APIKEY">Cnn News</a>
+            <a class="collapse-item" href="api/news/cnbc?type=JENIS_BERITA&apikey=MASUKKAN_APIKEY">CnBc News</a>
+            <a class="collapse-item" href="api/news/republika?type=JENIS_BERITA&apikey=MASUKKAN_APIKEY">Republika News</a>
+            <a class="collapse-item" href="api/news/tempo?type=JENIS_BERITA&apikey=MASUKKAN_APIKEY">Tempo News</a>
+            <a class="collapse-item" href="api/news/antara?type=JENIS_BERITA&apikey=MASUKKAN_APIKEY">Antara News</a>
+            <a class="collapse-item" href="api/news/kumparan?type=JENIS_BERITA&apikey=MASUKKAN_APIKEY">Kumparan News</a>
+            </div>
+            </div>
+        </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseother" aria-expanded="true"
           aria-controls="collapseother">
@@ -173,8 +278,11 @@ window['CboxReady'] = function (Cbox) {
             <h6 class="collapse-header">Other Menu</h6>
             <a class="collapse-item" href="api/nulis?text=ZahirGanteng&apikey=MASUKAN_APIKEY">Nulis Buku</a>
             <a class="collapse-item" href="api/infonpm?query=zhirrr-api&hostname=zhirrr&apikey=MASUKAN_APIKEY">Info NPM</a>
-            <a class="collapse-item" href="api/infogempa?apikey=MASUKAN_APIKEY">Info Gempa</a>
-            <a class="collapse-item" href="api/cuaca?kabupaten=kab bungo&apikey=MASUKAN_APIKEY">Info Cuaca</a>
+            <a class="collapse-item" href="api/infogempa?apikey=MASUKAN_APIKEY">Info Gempa Terkini</a>
+            <a class="collapse-item" href="api/infocuaca?provinsi=jakarta&apikey=MASUKAN_APIKEY">Info Cuaca Indonesia</a>
+            <a class="collapse-item" href="api/infocuaca/dunia?apikey=MASUKAN_APIKEY">Info Cuaca Dunia</a>
+            <a class="collapse-item" href="api/infocuaca/bandara?apikey=MASUKAN_APIKEY">Info Cuaca Bandara</a>
+            <a class="collapse-item" href="api/infotsunami?apikey=MASUKAN_APIKEY">Info Tsunami</a>
             <a class="collapse-item" href="api/covidindo?apikey=MASUKAN_APIKEY">Covid Indo</a>
             <a class="collapse-item" href="api/covidworld?apikey=MASUKAN_APIKEY">Covid World</a>
             <a class="collapse-item" href="api/short/tiny?url=google.com&apikey=MASUKAN_APIKEY">Short Link</a>
@@ -197,32 +305,29 @@ window['CboxReady'] = function (Cbox) {
       </div>
       <li class="nav-item">
           
-            <a class="nav-link collapsed" href="/about">
-            <i class="fas fa-fw fa-info"></i>
-                    <span>About Me</span>
-            </a>
+           
       </li>
       <li class="nav-item">
           
-            <a class="nav-link collapsed" href="https://wa.me/6283898698875">
+            <a class="nav-link collapsed" href="https://wa.me/12349805035">
             <i class="fab fa-fw fa-whatsapp"></i>
                     <span>WhatsApp</span>
             </a>
       </li>
       <li class="nav-item">
-            <a class="nav-link collapsed" href="https://github.com/Zhirrr">
+            <a class="nav-link collapsed" href="https://github.com/jepribarus">
             <i class="fab fa-fw fa-github"></i>
                     <span>Github</span>
             </a>
       </li>
       <li class="nav-item">
-            <a class="nav-link collapsed" href="https://instagram.com/zhirr_ajalah">
+            <a class="nav-link collapsed" href="https://instagram.com/jepribarus14">
             <i class="fab fa-fw fa-instagram"></i>
                     <span>Instagram</span>
             </a>
       </li>
       <hr class="sidebar-divider">
-      <div class="version"><b>Made With ♥️ By Zhirrr</b></div>
+      <div class="version"><b>bye jepri barus🐊</b></div>
     </ul>
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -265,7 +370,7 @@ window['CboxReady'] = function (Cbox) {
                     </div>
                   </div>
                   <div>
-                    <div class="small text-gray-500">December 12, 2019</div>
+                    <div class="small text-gray-500">18-08-2021</div>
                     <span class="font-weight-bold">A new monthly report is ready to download!</span>
                   </div>
                 </a>
@@ -311,37 +416,37 @@ window['CboxReady'] = function (Cbox) {
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                 aria-labelledby="messagesDropdown">
                 <h6 class="dropdown-header">
-                  Programming Skill
+                  Skill Developer
                 </h6>
                 <a class="dropdown-item align-items-center" href="#">
                   <div class="mb-3">
-                    <div class="small text-gray-500">Python
+                    <div class="small text-gray-500">Programing
+                      <div class="small float-right"><b>0%</b></div>
+                    </div>
+                    <div class="progress" style="height: 12px;">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </a>
+                <a class="dropdown-item align-items-center" href="#">
+                  <div class="mb-3">
+                    <div class="small text-gray-500">Kang Ghosting
                       <div class="small float-right"><b>80%</b></div>
                     </div>
                     <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="80"
                         aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 </a>
                 <a class="dropdown-item align-items-center" href="#">
                   <div class="mb-3">
-                    <div class="small text-gray-500">JavaScript
-                      <div class="small float-right"><b>70%</b></div>
+                    <div class="small text-gray-500">Kang Mesum
+                      <div class="small float-right"><b>0%</b></div>
                     </div>
                     <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </a>
-                <a class="dropdown-item align-items-center" href="#">
-                  <div class="mb-3">
-                    <div class="small text-gray-500">C++
-                      <div class="small float-right"><b>20%</b></div>
-                    </div>
-                    <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20"
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100"
                         aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
@@ -353,7 +458,7 @@ window['CboxReady'] = function (Cbox) {
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
+                <span class="ml-2 d-none d-lg-inline text-white small">Kang Somay</span>
               </a>
               </div>
             </li>
@@ -364,13 +469,12 @@ window['CboxReady'] = function (Cbox) {
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Beranda</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="./">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Beranda</li>
+              <li class="breadcrumb-item"><a href="./">Beranda</a></li>
             </ol>
           </div>
-
+          <marquee bgcolor="”red”"> Jangan Lupa Tersenyum Hari Ini~JEPRI BARUS</marquee>
           <div class="row mb-3">
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
@@ -380,9 +484,9 @@ window['CboxReady'] = function (Cbox) {
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-uppercase mb-1">Info Developer</div>
                       <br>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">Zhirrr</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Jepri Barus</div>
                       <div class="mt-2 mb-0 text-muted text-xs">
-                        <span class="text-success mr-2"> 13. y.o Programmer</span>
+                        <span class="text-success mr-2"> anak bangsat</span>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -392,11 +496,85 @@ window['CboxReady'] = function (Cbox) {
                 </div>
               </div>
             </div>
+
+<div class="col-xl-3 col-md-6 mb-4">
+<div class="card h-100">
+<div class="card-body">
+<div class="row no-gutters align-items-center">
+<div class="col mr-2">
+	</div>
+              </div>
+            </div>
+
+<div class="col-xl-3 col-md-6 mb-4">
+<div class="card h-100">
+<div class="card-body">
+<div class="row no-gutters align-items-center">
+<div class="col mr-2">
+<h6><br>Tidak Punya Apikey ??<br><b class="font-weight-bold">Chat Bot untuk membuat<br>Api Gratis <a href="https://wa.me/+12347140010?text=/generatekey">Whatsapp Bot</a>
+<marquee>
+<h6>Made By: Jepri Barus</h6>
+</marquee>
+</div>
+</div>
+<div class="mt-2 mb-0 text-muted text-xs">
+
+</span>
+</div>
+</div>
+<div class="col-auto">
+</div>
+</div>
+</div>
+</div>
+</div>
+<span>Since last month</span>
+</div>
+</div>
+<div class="col-auto">
+  <i class="fas fa-calendar fa-2x text-primary"></i>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-xl-3 col-md-6 mb-4">
+  <div class="card h-100">
+  <div class="card-body">
+  <div class="row align-items-center">
+  <div class="col mr-2">
+  <div class="text-xs font-weight-bold text-uppercase mb-1">Info</div>
+  <div class="h5 mb-0 font-weight-bold text-gray-800">Menuju Ramadhan</div>
+  <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 
+  <b id="time"></b><br></span>
+  <div class="mt-2 mb-0 text-muted text-xs">
+  </div>
+  </div>
+  <div class="col-auto">
+  </div>
+  </div>
+  </div>
+  <script type="text/javascript">document.write('\u003C\u0064\u0069\u0076\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0063\u006F\u006C\u002D\u0078\u006C\u002D\u0033\u0020\u0063\u006F\u006C\u002D\u006D\u0064\u002D\u0036\u0020\u006D\u0062\u002D\u0034\u0022\u003E\u000A\u003C\u0064\u0069\u0076\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0063\u0061\u0072\u0064\u0020\u0068\u002D\u0031\u0030\u0030\u0022\u003E\u000A\u003C\u0064\u0069\u0076\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0063\u0061\u0072\u0064\u002D\u0062\u006F\u0064\u0079\u0022\u003E\u000A\u003C\u0064\u0069\u0076\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0072\u006F\u0077\u0020\u006E\u006F\u002D\u0067\u0075\u0074\u0074\u0065\u0072\u0073\u0020\u0061\u006C\u0069\u0067\u006E\u002D\u0069\u0074\u0065\u006D\u0073\u002D\u0063\u0065\u006E\u0074\u0065\u0072\u0022\u003E\u000A\u003C\u0064\u0069\u0076\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0063\u006F\u006C\u0020\u006D\u0072\u002D\u0032\u0022\u003E\u000A\u003C\u0064\u0069\u0076\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0074\u0065\u0078\u0074\u002D\u0078\u0073\u0020\u0066\u006F\u006E\u0074\u002D\u0077\u0065\u0069\u0067\u0068\u0074\u002D\u0062\u006F\u006C\u0064\u0020\u0074\u0065\u0078\u0074\u002D\u0075\u0070\u0070\u0065\u0072\u0063\u0061\u0073\u0065\u0020\u006D\u0062\u002D\u0031\u0022\u003E\u0056\u0069\u0073\u0069\u0074\u006F\u0072\u003C\u002F\u0064\u0069\u0076\u003E\u000A\u003C\u0064\u0069\u0076\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0068\u0035\u0020\u006D\u0062\u002D\u0030\u0020\u0066\u006F\u006E\u0074\u002D\u0077\u0065\u0069\u0067\u0068\u0074\u002D\u0062\u006F\u006C\u0064\u0020\u0074\u0065\u0078\u0074\u002D\u0067\u0072\u0061\u0079\u002D\u0038\u0030\u0030\u0022\u003E\u000A\u003C\u0064\u0069\u0076\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0076\u0069\u0073\u0069\u0074\u006F\u0072\u0022\u0020\u0069\u0064\u003D\u0022\u0076\u0069\u0073\u0069\u0074\u006F\u0072\u0022\u003E\u0030\u0030\u003C\u002F\u0064\u0069\u0076\u003E\u000A\u003C\u002F\u0064\u0069\u0076\u003E\u000A\u003C\u0064\u0069\u0076\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u006D\u0074\u002D\u0032\u0020\u006D\u0062\u002D\u0030\u0020\u0074\u0065\u0078\u0074\u002D\u006D\u0075\u0074\u0065\u0064\u0020\u0074\u0065\u0078\u0074\u002D\u0078\u0073\u0022\u003E\u000A\u000A\u003C\u002F\u0073\u0070\u0061\u006E\u003E\u000A\u003C\u0073\u0070\u0061\u006E\u003E\u0054\u0068\u0069\u0073\u0020\u0077\u0065\u0062\u0020\u0076\u0069\u0073\u0069\u0074\u006F\u0072\u003C\u002F\u0073\u0070\u0061\u006E\u003E\u000A\u003C\u002F\u0064\u0069\u0076\u003E\u000A\u003C\u002F\u0064\u0069\u0076\u003E\u000A\u003C\u0064\u0069\u0076\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0063\u006F\u006C\u002D\u0061\u0075\u0074\u006F\u0022\u003E\u000A\u003C\u0069\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0066\u0061\u0073\u0020\u0066\u0061\u002D\u0065\u0079\u0065\u0020\u0066\u0061\u002D\u0032\u0078\u0020\u0074\u0065\u0078\u0074\u002D\u0070\u0072\u0069\u006D\u0061\u0072\u0079\u0022\u003E\u003C\u002F\u0069\u003E\u000A\u003C\u002F\u0064\u0069\u0076\u003E\u000A\u003C\u002F\u0064\u0069\u0076\u003E\u000A\u003C\u002F\u0064\u0069\u0076\u003E\u000A\u003C\u002F\u0064\u0069\u0076\u003E\u000A\u003C\u002F\u0064\u0069\u0076\u003E');</script>
+		<section class="section">
+	        <div class="container">
+	            <div class="columns">
+	                <div class="column is-offset-4 is-4">
+	                    
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+         <!-- Container Fluid-->
+        <!-- Container Fluid-->
+        <div class="container-fluid" id="container-wrapper">
+      <!-- Attention -->
+     <script type="text/javascript">document.write('\u003C\u0064\u0069\u0076\u0020\u0069\u0064\u003D\u0022\u0064\u0065\u006D\u006F\u0022\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0061\u006C\u0065\u0072\u0074\u0020\u0061\u006C\u0065\u0072\u0074\u002D\u0069\u006E\u0066\u006F\u0020\u0061\u006C\u0065\u0072\u0074\u002D\u0064\u0069\u0073\u006D\u0069\u0073\u0073\u0069\u0062\u006C\u0065\u0022\u0020\u0072\u006F\u006C\u0065\u003D\u0022\u0061\u006C\u0065\u0072\u0074\u0022\u003E\u000A\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u003C\u0062\u0075\u0074\u0074\u006F\u006E\u0020\u0074\u0079\u0070\u0065\u003D\u0022\u0062\u0075\u0074\u0074\u006F\u006E\u0022\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0063\u006C\u006F\u0073\u0065\u0022\u0020\u0064\u0061\u0074\u0061\u002D\u0064\u0069\u0073\u006D\u0069\u0073\u0073\u003D\u0022\u0061\u006C\u0065\u0072\u0074\u0022\u0020\u0061\u0072\u0069\u0061\u002D\u006C\u0061\u0062\u0065\u006C\u003D\u0022\u0043\u006C\u006F\u0073\u0065\u0022\u003E\u000A\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u003C\u0073\u0070\u0061\u006E\u0020\u0069\u0064\u003D\u0022\u0064\u0065\u006D\u006F\u0022\u0020\u0061\u0072\u0069\u0061\u002D\u0068\u0069\u0064\u0064\u0065\u006E\u003D\u0022\u0074\u0072\u0075\u0065\u0022\u003E\u0026\u0074\u0069\u006D\u0065\u0073\u003B\u003C\u002F\u0073\u0070\u0061\u006E\u003E\u000A\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u003C\u002F\u0062\u0075\u0074\u0074\u006F\u006E\u003E\u000A\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u003C\u0073\u0063\u0072\u0069\u0070\u0074\u003E\u000A\u0020\u0020\u0061\u0072\u0072\u0042\u0075\u006C\u0061\u006E\u0020\u003D\u0020\u005B\u0022\u004A\u0061\u006E\u0075\u0061\u0072\u0069\u0022\u002C\u0022\u0046\u0065\u0062\u0072\u0075\u0061\u0072\u0069\u0022\u002C\u0022\u004D\u0061\u0072\u0065\u0074\u0022\u002C\u0022\u0041\u0070\u0072\u0069\u006C\u0022\u002C\u0022\u004D\u0065\u0069\u0022\u002C\u0022\u004A\u0075\u006E\u0069\u0022\u002C\u0022\u004A\u0075\u006C\u0069\u0022\u002C\u0022\u0041\u0067\u0075\u0073\u0074\u0075\u0073\u0022\u002C\u0022\u0053\u0065\u0070\u0074\u0065\u006D\u0062\u0065\u0072\u0022\u002C\u0022\u004F\u006B\u0074\u006F\u0062\u0065\u0072\u0022\u002C\u0022\u004E\u006F\u0076\u0065\u006D\u0062\u0065\u0072\u0022\u002C\u0022\u0044\u0065\u0073\u0065\u006D\u0062\u0065\u0072\u0022\u005D\u003B\u000A\u0020\u0020\u0076\u0061\u0072\u0020\u0074\u0078\u0074\u0020\u003D\u0020\u0022\u0022\u003B\u000A\u0020\u0020\u0074\u0078\u0074\u0020\u002B\u003D\u0020\u0022\u003C\u0070\u003E\u003C\u0062\u003E\u0042\u0072\u006F\u0077\u0073\u0065\u0072\u0020\u0043\u006F\u0064\u0065\u004E\u0061\u006D\u0065\u003C\u002F\u0062\u003E\u003A\u0020\u0022\u0020\u002B\u0020\u006E\u0061\u0076\u0069\u0067\u0061\u0074\u006F\u0072\u002E\u0061\u0070\u0070\u0043\u006F\u0064\u0065\u004E\u0061\u006D\u0065\u0020\u002B\u0020\u0022\u003C\u002F\u0070\u003E\u0022\u003B\u000A\u0020\u0020\u0074\u0078\u0074\u0020\u002B\u003D\u0020\u0022\u003C\u0070\u003E\u003C\u0062\u003E\u0042\u0072\u006F\u0077\u0073\u0065\u0072\u0020\u004E\u0061\u006D\u0065\u003C\u002F\u0062\u003E\u003A\u0020\u0022\u0020\u002B\u0020\u006E\u0061\u0076\u0069\u0067\u0061\u0074\u006F\u0072\u002E\u0061\u0070\u0070\u004E\u0061\u006D\u0065\u0020\u002B\u0020\u0022\u003C\u002F\u0070\u003E\u0022\u003B\u000A\u0020\u0020\u0074\u0078\u0074\u0020\u002B\u003D\u0020\u0022\u003C\u0070\u003E\u003C\u0062\u003E\u0043\u006F\u006F\u006B\u0069\u0065\u0073\u0020\u0045\u006E\u0061\u0062\u006C\u0065\u0064\u003C\u002F\u0062\u003E\u003A\u0020\u0022\u0020\u002B\u0020\u006E\u0061\u0076\u0069\u0067\u0061\u0074\u006F\u0072\u002E\u0063\u006F\u006F\u006B\u0069\u0065\u0045\u006E\u0061\u0062\u006C\u0065\u0064\u0020\u002B\u0020\u0022\u003C\u002F\u0070\u003E\u0022\u003B\u000A\u0020\u0020\u0074\u0078\u0074\u0020\u002B\u003D\u0020\u0022\u003C\u0070\u003E\u003C\u0062\u003E\u0042\u0072\u006F\u0077\u0073\u0065\u0072\u0020\u004F\u006E\u006C\u0069\u006E\u0065\u003C\u002F\u0062\u003E\u003A\u0020\u0022\u0020\u002B\u0020\u006E\u0061\u0076\u0069\u0067\u0061\u0074\u006F\u0072\u002E\u006F\u006E\u004C\u0069\u006E\u0065\u0020\u002B\u0020\u0022\u003C\u002F\u0070\u003E\u0022\u003B\u000A\u0020\u0020\u0074\u0078\u0074\u0020\u002B\u003D\u0020\u0022\u003C\u0070\u003E\u003C\u0062\u003E\u0050\u006C\u0061\u0074\u0066\u006F\u0072\u006D\u003C\u002F\u0062\u003E\u003A\u0020\u0022\u0020\u002B\u0020\u006E\u0061\u0076\u0069\u0067\u0061\u0074\u006F\u0072\u002E\u0070\u006C\u0061\u0074\u0066\u006F\u0072\u006D\u0020\u002B\u0020\u0022\u003C\u002F\u0070\u003E\u0022\u003B\u000A\u0020\u0020\u0074\u0078\u0074\u0020\u002B\u003D\u0020\u0022\u003C\u0070\u003E\u003C\u0062\u003E\u0055\u0073\u0065\u0072\u002D\u0061\u0067\u0065\u006E\u0074\u0020\u0068\u0065\u0061\u0064\u0065\u0072\u003C\u002F\u0062\u003E\u003A\u0020\u0022\u0020\u002B\u0020\u006E\u0061\u0076\u0069\u0067\u0061\u0074\u006F\u0072\u002E\u0075\u0073\u0065\u0072\u0041\u0067\u0065\u006E\u0074\u0020\u002B\u0020\u0022\u003C\u002F\u0070\u003E\u0022\u003B\u000A\u0020\u0020\u0076\u0061\u0072\u0020\u0064\u0020\u003D\u0020\u006E\u0065\u0077\u0020\u0044\u0061\u0074\u0065\u0028\u0029\u003B\u000A\u0020\u0020\u0063\u006F\u006E\u0073\u0074\u0020\u006A\u0061\u006D\u0020\u003D\u0020\u0064\u002E\u0067\u0065\u0074\u0048\u006F\u0075\u0072\u0073\u0028\u0029\u003B\u000A\u0020\u0020\u0063\u006F\u006E\u0073\u0074\u0020\u006D\u0065\u006E\u0069\u0074\u0020\u003D\u0020\u0064\u002E\u0067\u0065\u0074\u004D\u0069\u006E\u0075\u0074\u0065\u0073\u0028\u0029\u003B\u000A\u0020\u0020\u0063\u006F\u006E\u0073\u0074\u0020\u0064\u0065\u0074\u0069\u006B\u0020\u003D\u0020\u0064\u002E\u0067\u0065\u0074\u0053\u0065\u0063\u006F\u006E\u0064\u0073\u0028\u0029\u003B\u000A\u0020\u0020\u0063\u006F\u006E\u0073\u0074\u0020\u0074\u0067\u006C\u0020\u003D\u0020\u0064\u002E\u0067\u0065\u0074\u0044\u0061\u0074\u0065\u0028\u0029\u003B\u000A\u0020\u0020\u0063\u006F\u006E\u0073\u0074\u0020\u0062\u006C\u006E\u0020\u003D\u0020\u0064\u002E\u0067\u0065\u0074\u004D\u006F\u006E\u0074\u0068\u0028\u0029\u003B\u000A\u0020\u0020\u0063\u006F\u006E\u0073\u0074\u0020\u0074\u0068\u006E\u0020\u003D\u0020\u0064\u002E\u0067\u0065\u0074\u0046\u0075\u006C\u006C\u0059\u0065\u0061\u0072\u0028\u0029\u003B\u000A\u0020\u0020\u0063\u006F\u006E\u0073\u0074\u0020\u0062\u0075\u006C\u0061\u006E\u0020\u003D\u0020\u0061\u0072\u0072\u0042\u0075\u006C\u0061\u006E\u005B\u0062\u006C\u006E\u005D\u000A\u0020\u0020\u0064\u006F\u0063\u0075\u006D\u0065\u006E\u0074\u002E\u0077\u0072\u0069\u0074\u0065\u0028\u0074\u0078\u0074\u0029\u000A\u0020\u0020\u0064\u006F\u0063\u0075\u006D\u0065\u006E\u0074\u002E\u0077\u0072\u0069\u0074\u0065\u0028\u0022\u0044\u0061\u0074\u0065\u0020\u003A\u0020\u0022\u002B\u0020\u006A\u0061\u006D\u0020\u002B\u0022\u003A\u0022\u002B\u0020\u006D\u0065\u006E\u0069\u0074\u0020\u002B\u0022\u003A\u0022\u002B\u0020\u0064\u0065\u0074\u0069\u006B\u0020\u002B\u0022\u007E\u0022\u002B\u0020\u0074\u0067\u006C\u0020\u002B\u0022\u002D\u0022\u002B\u0020\u0062\u0075\u006C\u0061\u006E\u0020\u002B\u0022\u002D\u0022\u002B\u0020\u0074\u0068\u006E\u0020\u002B\u0022\u003C\u0062\u0072\u003E\u0057\u0065\u006C\u0063\u006F\u006D\u0065\u0020\u0062\u0061\u0063\u006B\u0021\u0022\u0029\u003C\u002F\u0073\u0063\u0072\u0069\u0070\u0074\u003E\u000A\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u003C\u002F\u0064\u0069\u0076\u003E');</script>
+<style>
 <!-- Pie Chart -->
             <div class="col-xl-4 col-lg-5">
               <div class="card mb-4">
               	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-              	<h6 class="m-0 font-weight-bold text-primary">Progamming Skill</h6>
+              	<h6 class="m-0 font-weight-bold text-primary">Skill Depelover</h6>
                   <div class="dropdown no-arrow">
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                       aria-labelledby="dropdownMenuLink">
@@ -409,29 +587,29 @@ window['CboxReady'] = function (Cbox) {
                 </div>
 <div class="card-body">
                   <div class="mb-3">
-                    <div class="small text-gray-500">Python
+                    <div class="small text-gray-500">Skill Programming
+                      <div class="small float-right"><b>0%</b></div>
+                    </div>
+                    <div class="progress" style="height: 12px;">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 0%" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="small text-gray-500">Kang Ghosting
                       <div class="small float-right"><b>80%</b></div>
                     </div>
                     <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="80"
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
                         aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                   <div class="mb-3">
-                    <div class="small text-gray-500">JavaScript
-                      <div class="small float-right"><b>70%</b></div>
+                    <div class="small text-gray-500">Kang Mesum
+                      <div class="small float-right"><b>100%</b></div>
                     </div>
                     <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <div class="small text-gray-500">C++
-                      <div class="small float-right"><b>20%</b></div>
-                    </div>
-                    <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20"
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100"
                         aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
@@ -444,17 +622,17 @@ window['CboxReady'] = function (Cbox) {
                 </div>
               </div>
             </div>
-            
+            <marquee bgcolor="#16182D" style="margin-right: 6px; margin-left: 10px; margin-top: 10px;margin-bottom: 12px; border-radius: 5px;letter-spacing: 3px; font-family:arial; font-size:20px; color:#ffffff; padding-top: 4px;padding-bottom: 4px;">Copas Sana Sini Untuk Belajar Suhu_-JEPRI BARUS_-</marquee>
           <!--Row-->
 
           <div class="row">
             <div class="col-lg-12 text-center">
-              <p>Suka Dengan API Nya ? Boleh Dong, Follow Github Gw : <a href="https://github.com/Zhirrr"
-                  class="btn btn-primary btn-sm" target="_blank"><i class="fab fa-fw fa-github"></i>&nbsp;GitHub</a></p>
-            </div>
-          </div>
-
-        </div>
+              <div class="card-body">
+<div class="bg"></div>
+<div class="text">
+<div class="status">
+</div>
+</div>
         <!---Container Fluid-->
       </div>
       <!-- Footer -->
@@ -462,8 +640,10 @@ window['CboxReady'] = function (Cbox) {
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>Copyright &copy; 2021 - Developed By
-              <b><a href="https://github.com/Zhirrr" target="_blank">Zhirrr</a></b>
+              <b><a href="https://github.com/Zhirrr" target="_blank">Jepri Barus</a></b>
             </span>
+            <body>
+	<center><audio autoplay="autoplay" src="https://g.top4top.io/m_1917ekv6o0.mp3"></audio></a></center>
           </div>
         </div>
       </footer>
@@ -483,5 +663,18 @@ window['CboxReady'] = function (Cbox) {
   <script src="vendor/chart.js/Chart.min.js"></script>
   <script src="js/demo/chart-area-demo.js"></script>  
 </body>
+<script>
+  function getvisitor(){
+              var xhr = new XMLHttpRequest();
+              var url = 'https://api.countapi.xyz/hit/zahirr-web.herokuapp.com/visits';
+              xhr.onloadend = function(){
+             data = JSON.parse(this.responseText);
+  document.getElementById("visitor").textContent = data.value
+              };
+              xhr.open("GET", url, true);
+              xhr.send();
+  }
+  
+</script>
 
 </html>
